@@ -4,7 +4,7 @@ from Send_email import info
 
 # url and api key from newsapi.org
 topic = "tesla"
-api_key = os.getenv ( "API_KEY" ) # key  value stored locally
+api_key = os.getenv ( "API_KEY" ) # key value stored locally
 url = ("https://newsapi.org/v2/everything?"
        f"q={topic}&"
        "from=2025-01-12&"
@@ -32,5 +32,5 @@ message=f"""Subject: Daily News
 
 #converts strings to bytes to safely send to email or http protocols
 message = message.encode ( "utf-8" )
-# send data to below line where it is utilized for email function
+# send data, where it is used for email function
 info ( message )
