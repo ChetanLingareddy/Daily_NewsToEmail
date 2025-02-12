@@ -1,7 +1,7 @@
-
 import smtplib , ssl
 import os
 
+# function that gets data from the main file and pass it to email.
 def info(message):
     host = "smtp.gmail.com"
     port = 465
@@ -12,7 +12,7 @@ def info(message):
 
     receiver = "lchetanreddy2001@gmail.com"
 
-
+# For default settings and authentication
     context = ssl.create_default_context()
 
     with smtplib.SMTP_SSL(host,port,context=context) as server:
